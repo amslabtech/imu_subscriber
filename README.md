@@ -3,7 +3,7 @@
 IMUからのデータを受けるsubscriberのサンプルプログラム．基本的にどのPCからも利用できる（はず）．
 
 
-# dependancy
+## dependancy
 - MqttClass
 - imu_structure.hpp
 
