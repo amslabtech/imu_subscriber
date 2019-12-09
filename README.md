@@ -6,7 +6,7 @@ IMUからのデータを受けるsubscriberのサンプルプログラム．基�
 ## dependancy
 - mosquitto
 - MqttClass
-- RTIMULib2
+- imu_structure.hpp
 
 
 ## build
