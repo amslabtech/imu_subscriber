@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(imu_subscriber)
 
 set(CMAKE_CXX_FLAGS "-O2 -std=c++11 -Wall")
-set(MOSQUITTO_DIR "/home/pi/dev/MqttClass")
+set(MOSQUITTO_DIR "/home/parallels/dev/MqttClass")
 
 add_executable(imu_subscriber src/imu_subscriber.cpp)
 

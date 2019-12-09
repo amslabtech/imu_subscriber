@@ -37,9 +37,9 @@ struct ImuStructure {
 	void print3() {
 		std::cout
 		<< std::setw( 6) << id
-		<< std::setw(12) << fusion [0]
-		<< std::setw(12) << fusion [1]
-		<< std::setw(12) << fusion [2]
+		<< std::setw(16) << fusion [0]
+		<< std::setw(16) << fusion [1]
+		<< std::setw(16) << fusion [2]
 		<< std::endl;
 	}
 };
