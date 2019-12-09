@@ -47,7 +47,7 @@ struct ImuStructure {
 	void diff_time(struct timeval ts) {
 		double t1 =  sec+ usec/1000000.0;
 		double t2 = ts.tv_sec+ts.tv_usec/1000000.0;
-		std::cout << t2 - t1;
+		std::cout << std::setprecision(10) << t2 - t1;
 	}
 };
 

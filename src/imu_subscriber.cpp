@@ -39,12 +39,18 @@ void MyMosq::onMessage(std::string _topic, void* _data, int _len)
 	data.print3();
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-	const char* ip_addr  = "192.168.0.47";
+	char* ip_addr = (char*)"192.168.0.172";
 	// const char* ip_addr  = "192.168.1.25";
-	// const char* ip_addr  = "localhost";
 	const char* username = "imu_subscriber";
+
+	if(argc>1) {
+		ip_addr = argv[1];
+	} else {
+		std::cout << "usage: " << argv[0] << " ip_addr\n";
+	}
+	std::cout << "using host: " << ip_addr << std::endl;;
 
 	MyMosq imu_subscriber(topic);
 
