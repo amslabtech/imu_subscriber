@@ -17,7 +17,7 @@ class MyMosq : public Mosquitto {
 	void onConnected();
 	void onError(const char* _msg) { std::cout << _msg; }
 	void onMessage(std::string _topic, void* _data, int _len);
-	//struct timeval ts;
+	struct timeval ts;
 
   public:
 	MyMosq(const char* _topic):topic(_topic){}
@@ -32,8 +32,10 @@ void MyMosq::onConnected()
 #include <strings.h>
 void MyMosq::onMessage(std::string _topic, void* _data, int _len)
 {
-	//gettimeofday(&ts,NULL);
+	gettimeofday(&ts,NULL);
 	bcopy(_data, (char*)&data, sizeof(data));		
+	data.diff_time(ts);
+	std::cout << ",   ";
 	data.print3();
 }
 
