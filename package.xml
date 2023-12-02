@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>imu_subscriber</name>
+  <version>0.0.0</version>
+  <description>
+    A sample program that subscribe IMU data via MQTT.
+  </description>
+  <maintainer email="amsl@todo.todo">amsl</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <build_depend>mosquitto-dev</build_depend>
+  <build_depend>mqttclass</build_depend>
+  <exec_depend>mosquitto</exec_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
